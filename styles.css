@@ -284,6 +284,11 @@ body.focusMode .sanctuary-card { min-height: auto; }
   .nav-toggle { display: inline-flex; }
   .nav-links { position: absolute; right: 1rem; top: calc(100% + .5rem); flex-direction: column; align-items: stretch; width: min(260px, calc(100vw - 2rem)); background: rgba(13, 8, 18, .96); border: 1px solid var(--line); border-radius: 1rem; padding: .5rem; box-shadow: var(--shadow); display: none; }
   .nav-links.open { display: flex; }
+  /* With scripts unavailable, show the links directly instead of an inert menu. */
+  html:not(.js-ready) .nav { flex-wrap: wrap; }
+  html:not(.js-ready) .nav-toggle { display: none; }
+  html:not(.js-ready) .nav-links { display: flex; position: static; width: 100%; flex-direction: row; flex-wrap: wrap; gap: .15rem; padding: 0; border: 0; box-shadow: none; background: transparent; }
+  html:not(.js-ready) .nav-links a { padding: .4rem .5rem; }
   .nav-links a { padding: .78rem .9rem; }
   .orientation-grid, .figure-grid, .principle-grid { grid-template-columns: repeat(2, 1fr); }
   .symbol-museum, .door-grid, .guide-grid { grid-template-columns: repeat(2, 1fr); }
@@ -309,6 +314,10 @@ body.focusMode .sanctuary-card { min-height: auto; }
 /* v1.6 learning-path refinements */
 .becoming-line { color: var(--text); border-left: 2px solid var(--line-strong); padding-left: 1rem; margin-top: 1rem; }
 .noscript-summary { border-bottom: 1px solid var(--line); }
+.key-feedback { color: var(--muted); padding-left: 1.25rem; line-height: 1.65; }
+.key-feedback li + li { margin-top: .55rem; }
+.key-feedback strong { color: var(--text); }
+.key-feedback a { color: var(--gold); text-underline-offset: .2em; }
 @media (min-width: 981px) { .nav-links a { padding-inline: .58rem; font-size: .84rem; } }
 .key-row select:invalid, .builder-form select:invalid { color: var(--soft); }
 

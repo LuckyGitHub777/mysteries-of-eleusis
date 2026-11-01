@@ -16,7 +16,7 @@ Threshold → Myth → Sacred Pattern → Known / Hidden → Figures → Symbols
 - `app.js` interactions and Eleusinian content model
 - `styles.css` visual system
 - `data/eleusis-mastery.json` agent-readable mastery model
-- `docs/ai-ux-acceptance-72x72-v1.12.md` acceptance report
+- `docs/CONTENT_BOUNDARIES.md` historical and interpretive boundaries
 
 ## Boundaries
 
