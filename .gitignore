@@ -1,0 +1,12 @@
+# Local/editor noise
+.DS_Store
+Thumbs.db
+*.log
+
+# Python cache from local test runs
+__pycache__/
+*.pyc
+
+# Local archives
+*.zip
+*.sha256

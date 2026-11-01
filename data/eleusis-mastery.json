@@ -1,0 +1,232 @@
+{
+  "version": "1.12",
+  "purpose": "Transform a first-time human visitor or AI agent with no prior familiarity into a plain-language interpreter and careful creative practitioner of the Ancient Eleusinian Mysteries as a symbolic pattern, without claiming to reproduce the hidden ancient rite.",
+  "core_identity": "Eleusis is an ancient Greek sanctuary near Athens; the Eleusinian Mysteries were initiation rites honoring Demeter and Persephone. Their inner ceremonies were secret and cannot be fully reconstructed.",
+  "known_boundary": "The ancient inner rites are not fully known. This website uses an interpretive seven-movement learning framework, not an attested sequence of secret ceremonies.",
+  "public_promise": "Understand Eleusis, meet Demeter and Persephone, learn what remains hidden, read the symbols, walk the path, return with one word, and compose from the pattern.",
+  "central_myth": [
+    {
+      "step": 1,
+      "name": "Persephone is taken below",
+      "meaning": "Hades takes Persephone to the underworld."
+    },
+    {
+      "step": 2,
+      "name": "Demeter searches",
+      "meaning": "Demeter searches for her missing daughter."
+    },
+    {
+      "step": 3,
+      "name": "The earth suffers",
+      "meaning": "Demeter withholds fertility during her grief."
+    },
+    {
+      "step": 4,
+      "name": "A return is arranged",
+      "meaning": "Zeus sends Hermes; a pomegranate seed binds Persephone to recurring time below."
+    },
+    {
+      "step": 5,
+      "name": "The reunion and cycle",
+      "meaning": "Persephone spends part of the year with Demeter and part in the underworld."
+    }
+  ],
+  "ritual_pattern": [
+    "Invocation",
+    "Loss",
+    "Search",
+    "Descent",
+    "Revelation",
+    "Return",
+    "Blessing"
+  ],
+  "figures": {
+    "Demeter": {
+      "role": "The Search",
+      "read_as": "grief, devotion, earth, nourishment, memory"
+    },
+    "Persephone": {
+      "role": "The Descent",
+      "read_as": "crossing below, changed return, underworld knowledge"
+    },
+    "Hades": {
+      "role": "The Threshold",
+      "read_as": "boundary, darkness, hidden power, unavoidable transformation"
+    },
+    "Triptolemos": {
+      "role": "The Transmission",
+      "read_as": "carrying what is received outward as cultivation and teaching"
+    },
+    "Eumolpos": {
+      "role": "The Voice",
+      "read_as": "sacred memory, song, lineage, words held with restraint"
+    },
+    "The Initiate": {
+      "role": "The Witness",
+      "read_as": "one who enters, sees, participates, remembers, returns"
+    }
+  },
+  "symbols": {
+    "Seed": {
+      "is": "life hidden in darkness",
+      "means": "descent can become renewal",
+      "how_to_read": "what is buried may not be dead"
+    },
+    "Grain": {
+      "is": "cultivated life that feeds community",
+      "means": "return becomes nourishment",
+      "how_to_read": "wisdom is proven by what it helps grow"
+    },
+    "Torch": {
+      "is": "moving light in darkness",
+      "means": "search, guidance, and attention",
+      "how_to_read": "the path appears step by step"
+    },
+    "Veil": {
+      "is": "boundary between visible and hidden",
+      "means": "mystery protects depth from flattening",
+      "how_to_read": "some truths require careful approach"
+    },
+    "Pomegranate": {
+      "is": "red fruit of seeds and binding",
+      "means": "descent leaves a mark and a bond",
+      "how_to_read": "every threshold changes the one who crosses"
+    },
+    "Cup": {
+      "is": "vessel for symbolic participation",
+      "means": "the body belongs to the mystery",
+      "how_to_read": "experience is embodied attention, not thought alone"
+    },
+    "Road": {
+      "is": "the way between ordinary world and sanctuary",
+      "means": "initiation unfolds through movement",
+      "how_to_read": "understanding comes by walking the sequence"
+    },
+    "Hall": {
+      "is": "inner chamber of encounter",
+      "means": "the center is entered, not explained from outside",
+      "how_to_read": "ask what is spoken, shown, and done"
+    },
+    "Dawn": {
+      "is": "light after hidden passage",
+      "means": "return after descent",
+      "how_to_read": "completion is the ability to come back changed"
+    }
+  },
+  "ux_learning_path": [
+    {
+      "section": "Threshold",
+      "competency": "Know what Eleusis is and why no prior knowledge is needed"
+    },
+    {
+      "section": "Myth",
+      "competency": "Retell the five-beat Demeter and Persephone story"
+    },
+    {
+      "section": "Sacred Pattern",
+      "competency": "Map story into ritual grammar"
+    },
+    {
+      "section": "Known / Hidden",
+      "competency": "Distinguish careful knowledge from false reconstruction"
+    },
+    {
+      "section": "Figures",
+      "competency": "Identify each core role and its symbolic function"
+    },
+    {
+      "section": "Symbols",
+      "competency": "Read objects through what-it-is, what-it-means, how-to-read"
+    },
+    {
+      "section": "Sacred Way",
+      "competency": "Understand initiation as a journey from ordinary world to inner hall and return"
+    },
+    {
+      "section": "Inner Hall",
+      "competency": "Recognize mystery as words, images, and actions"
+    },
+    {
+      "section": "Return",
+      "competency": "Integrate meaning as a word carried back"
+    },
+    {
+      "section": "Seven Keys",
+      "competency": "Confirm comprehension without turning mystery into trivia"
+    },
+    {
+      "section": "Compose",
+      "competency": "Apply Eleusinian grammar safely and creatively"
+    }
+  ],
+  "mastery_competencies": [
+    "Retell the Demeter and Persephone myth in order",
+    "Explain why the exact inner rites remain hidden",
+    "Describe the ritual pattern of invocation, loss, search, descent, revelation, return, blessing",
+    "Identify Demeter, Persephone, Hades, Triptolemos, Eumolpos, and the Initiate",
+    "Interpret seed, grain, torch, veil, pomegranate, cup, road, hall, and dawn",
+    "Walk the Sacred Way as a journey model",
+    "Recognize mystery as spoken, shown, and enacted",
+    "Distinguish inspiration from reconstruction",
+    "Design a symbolic chamber using Eleusinian grammar with visible exits and no hidden intensity"
+  ],
+  "safe_application": [
+    "No hidden substances, recipes, or pharmacological instructions",
+    "No coercive participation",
+    "No promised supernatural proof",
+    "No claim to reveal the exact secret rite",
+    "Visible exits and sensory controls",
+    "Return and grounding are part of the design",
+    "Symbolic inspiration is allowed; false reconstruction is not"
+  ],
+  "theatre_lens": {
+    "status": "optional_secondary_layer",
+    "sequence": [
+      "Saturn",
+      "Jupiter",
+      "Mars",
+      "Sol",
+      "Venus",
+      "Mercury",
+      "Luna"
+    ],
+    "mapping": {
+      "Saturn": "loss / descent",
+      "Jupiter": "search / order",
+      "Mars": "crisis / force",
+      "Sol": "revelation",
+      "Venus": "renewal",
+      "Mercury": "interpretation",
+      "Luna": "return"
+    }
+  },
+  "agent_success_state": "An AI agent can summarize the site as: Eleusis is introduced with Demeter and Persephone; the path builds through myth, boundary, figures, symbols, Sacred Way, inner grammar, return, Seven Keys, and safe creative application.",
+  "ux_clarity_rule": "Every poetic image appears only after the plain-language meaning. A first-time visitor meets Eleusis, Demeter, and Persephone before encountering mythic shorthand such as daughter, mother, descent, and return.",
+  "agent_entrypoints": [
+    "/llms.txt",
+    "/data/eleusis-mastery.json",
+    "/index.html"
+  ],
+  "public_release_note": "v1.10 removes the hero sanctuary center seam, preserves plain-language Eleusinian learning, and maintains non-addressing public-language discipline.",
+  "ux_visual_rule": "Decorative divisions must not pass through symbolic objects such as the seed, torch, grain, or moon unless the division is explicitly meaningful and visually legible.",
+  "github_pages_target": "https://luckygithub777.github.io/mysteries-of-eleusis/",
+  "ritual_pattern_type": "modern educational interpretation; not an ancient ritual transcript",
+  "historical_facts": [
+    "Eleusis is a place near Athens, Greece.",
+    "The Mysteries honored Demeter and Persephone.",
+    "A procession traveled from Athens to Eleusis along the Sacred Way.",
+    "The Telesterion was an initiation hall at Eleusis.",
+    "Detailed inner rites were secret and remain incompletely known."
+  ],
+  "interpretive_elements": [
+    "The seven stages Invocation through Blessing are a modern teaching pattern.",
+    "The site symbolic return word and chamber composer are modern activities, not recovered ancient ceremonies.",
+    "The theatre-magick lens concerns Crowley’s 1910 reinterpretation, distinct from ancient Eleusis."
+  ],
+  "reference_links": [
+    "https://www.hh.gr/en/destinations/eleusis/",
+    "https://www.emfc.gr/en/temporary-exhibitions/eleusis-great-mysteries",
+    "https://www.metmuseum.org/art/collection/search/248899"
+  ],
+  "source_boundary": "Historical facts and creative interpretations are explicitly separate, both for human visitors and AI agents."
+}

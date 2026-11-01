@@ -1,0 +1,25 @@
+# The Mysteries of Eleusis
+
+A static public web experience for understanding the Ancient Eleusinian Mysteries through plain-language myth, symbols, path, return, and careful creative application.
+
+## Purpose
+
+Introduce Eleusis as an ancient Greek sanctuary near Athens where the Mysteries of Demeter and Persephone were celebrated. Follow the story of descent, search, hidden center, return, and renewal. Preserve the boundary: the exact inner rite remains hidden, so the site teaches myth, symbols, path, and careful creative application without claiming literal reconstruction.
+
+## Public path
+
+Threshold → Myth → Sacred Pattern → Known / Hidden → Figures → Symbols → Sacred Way → Inner Hall → Revelation → Return → Seven Keys → Compose a Mystery Chamber → Lantern Guide → Optional Theatre Lens
+
+## Key files
+
+- `index.html` public experience
+- `app.js` interactions and Eleusinian content model
+- `styles.css` visual system
+- `data/eleusis-mastery.json` agent-readable mastery model
+- `docs/ai-ux-acceptance-72x72-v1.12.md` acceptance report
+
+## Boundaries
+
+The seven-movement teaching pattern and creative chamber are modern interpretations, not recovered ancient rites. No claim to reveal the hidden ancient rite. No hidden substances, recipes, coercive participation, or supernatural proof claims. Symbolic inspiration and careful interpretive design are allowed.
+
+Expected live URL: https://luckygithub777.github.io/mysteries-of-eleusis/

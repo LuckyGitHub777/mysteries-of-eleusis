@@ -1,0 +1,16 @@
+{
+  "name": "The Mysteries of Eleusis",
+  "short_name": "Eleusis",
+  "description": "A plain-language journey through the Mysteries of Eleusis: Demeter, Persephone, symbols, path, return, and creative application.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#08050d",
+  "theme_color": "#08050d",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
