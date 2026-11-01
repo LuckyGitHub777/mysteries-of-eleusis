@@ -323,7 +323,8 @@ body.focusMode .sanctuary-card { min-height: auto; }
 
 /* v1.12: calm reading, keyboard focus and anchored navigation */
 html { scroll-padding-top: 5.5rem; }
-.section-shell[id] { scroll-margin-top: 5.5rem; }
+/* One anchor offset prevents excess empty space after navigation. */
+.section-shell[id] { scroll-margin-top: 0; }
 :where(a, button, input, select):focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .nav-links a:focus-visible, .button:focus-visible, .word-button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 @media (max-width:640px) { .hero-actions .button { width:100%; } .hero-text { font-size:1.08rem; line-height:1.65; } }
