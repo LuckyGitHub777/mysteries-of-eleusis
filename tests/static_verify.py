@@ -45,6 +45,16 @@ checks['no-script mobile navigation']='html:not(.js-ready) .nav-links { display:
 checks['menu escape recovery']='event.key === "Escape"' in js and 'close(true)' in js
 checks['missed-key teaching feedback']='class=\"key-feedback\"' in js and 'm.note' in js
 checks['agent references present']='docs/CONTENT_BOUNDARIES.md' in (ROOT/'llms.txt').read_text() and 'ai-ux-acceptance-72x72-v1.12.md' not in (ROOT/'llms.txt').read_text()
+checks['agent links exist']=all((ROOT/x).is_file() for x in re.findall(r'`([\w./-]+\.[\w]+)`', (ROOT/'llms.txt').read_text()))
+checks['brand accessible name']='aria-label="The Mysteries of Eleusis home"' not in html
+checks['semantic tab panels']='<article class="myth-panel"' not in html and '<article class="way-panel"' not in html
+checks['trusted museum attribution']='www.theacropolismuseum.gr/en/temporary-exhibitions/eleusis-great-mysteries' in (ROOT/'docs/CONTENT_BOUNDARIES.md').read_text()
+checks['Homeric Hymn reference']='chs.harvard.edu/primary-source/homeric-hymn-to-demeter-sb/' in (ROOT/'docs/CONTENT_BOUNDARIES.md').read_text()
+checks['nested 404 styling']='href="/mysteries-of-eleusis/styles.css"' in (ROOT/'404.html').read_text()
+checks['complete MIT license']='IN NO EVENT SHALL THE' in (ROOT/'LICENSE').read_text()
+checks['Theatre attribution']= 'Aleister Crowley’s 1910' in html
+checks['single anchor offset']='scroll-margin-top: 0' in css
+checks['no checkout credentials persistence']='persist-credentials: false' in (ROOT/'.github/workflows/quality.yml').read_text()
 report={'total':len(checks),'passed':sum(checks.values()),'failed':{k:v for k,v in checks.items() if not v},'checks':checks}
 print(json.dumps(report,indent=2))
 if report['failed']:sys.exit(1)
