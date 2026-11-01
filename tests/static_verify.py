@@ -41,6 +41,10 @@ checks['css reduced motion']='prefers-reduced-motion' in css
 checks['css focus visible']=':focus-visible' in css
 checks['no hidden credentials']=not any(s in html+js for s in ['ghp_','sk_live_','BEGIN PRIVATE KEY'])
 checks['public-only release']=not any((ROOT/p).exists() for p in ['docs/QA_REPORT.md','docs/matrix-72x72.json','docs/browser-test-results.json'])
+checks['no-script mobile navigation']='html:not(.js-ready) .nav-links { display: flex' in css
+checks['menu escape recovery']='event.key === "Escape"' in js and 'close(true)' in js
+checks['missed-key teaching feedback']='class=\"key-feedback\"' in js and 'm.note' in js
+checks['agent references present']='docs/CONTENT_BOUNDARIES.md' in (ROOT/'llms.txt').read_text() and 'ai-ux-acceptance-72x72-v1.12.md' not in (ROOT/'llms.txt').read_text()
 report={'total':len(checks),'passed':sum(checks.values()),'failed':{k:v for k,v in checks.items() if not v},'checks':checks}
 print(json.dumps(report,indent=2))
 if report['failed']:sys.exit(1)

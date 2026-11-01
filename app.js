@@ -150,12 +150,25 @@ function updateModeButtons() {
 }
 function initNav() {
   const toggle = $(".nav-toggle"); const links = $("#navLinks");
-  toggle?.addEventListener("click", () => {
+  if (!toggle || !links) return;
+  document.documentElement.classList.add("js-ready");
+  const close = (restoreFocus = false) => {
+    links.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+    if (restoreFocus) toggle.focus();
+  };
+  toggle.addEventListener("click", () => {
     const open = links.classList.toggle("open");
     toggle.setAttribute("aria-expanded", String(open));
   });
-  links?.addEventListener("click", (event) => {
-    if (event.target.tagName === "A") { links.classList.remove("open"); toggle?.setAttribute("aria-expanded", "false"); }
+  links.addEventListener("click", (event) => {
+    if (event.target.closest("a")) close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && links.classList.contains("open")) close(true);
+  });
+  document.addEventListener("pointerdown", (event) => {
+    if (links.classList.contains("open") && !event.target.closest(".nav")) close();
   });
 }
 function initReveal() {
@@ -242,14 +255,28 @@ function initKeys() {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const fd = new FormData(form);
-    let correct = 0;
-    data.keys.forEach((k, i) => { if (fd.get(`key${i}`) === k.answer) correct++; });
+    const guidance = [
+      ["Demeter is the searching mother.", "#myth", "Myth"],
+      ["Persephone is the daughter taken below.", "#myth", "Myth"],
+      ["Eleusis is the ancient sanctuary near Athens.", "#begin", "Eleusis"],
+      ["The inner ceremonies are not fully known.", "#known", "Known / Hidden"],
+      ["The pomegranate explains the recurring time below.", "#myth", "Myth"],
+      ["The Sacred Way connected Athens with Eleusis.", "#path", "Sacred Way"],
+      ["The seven-movement path is a modern interpretation.", "#pattern", "Pattern"]
+    ];
+    const missed = [];
+    data.keys.forEach((k, i) => {
+      if (fd.get(`key${i}`) !== k.answer) missed.push({ number: i+1, answer: k.answer, note: guidance[i][0], href: guidance[i][1], label: guidance[i][2] });
+    });
+    const correct = data.keys.length - missed.length;
     result.classList.add("visible");
-    if (correct === data.keys.length) {
+    if (!missed.length) {
       result.innerHTML = `<h3>The seven keys are open.</h3><p>The myth, the sacred place, the pomegranate, the procession, and the boundary between history and modern interpretation have been identified.</p>`;
     } else {
-      result.innerHTML = `<h3>${correct} of ${data.keys.length} keys opened.</h3><p>The Myth, Known / Hidden, and Sacred Way sections hold the missing keys.</p>`;
+      result.innerHTML = `<h3>${correct} of ${data.keys.length} keys opened.</h3><p>Each missing key has an explanation and a path back to its story.</p><ol class="key-feedback">${missed.map((m) => `<li><strong>Key ${m.number} · ${escapeHTML(m.answer)}</strong> — ${escapeHTML(m.note)} <a href="${m.href}">${escapeHTML(m.label)}</a></li>`).join("")}</ol>`;
     }
+    result.setAttribute("tabindex", "-1");
+    result.focus({ preventScroll: true });
   });
 }
 function initBuilder() {
