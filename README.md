@@ -32,6 +32,8 @@ MIT; see [`LICENSE`](LICENSE).
 
 ## Museum Lens | Art × Science
 
+Explore the [temporary Art × Science Museum preview](https://luckygithub777.github.io/golden-ratio-frequency-lab/museum-preview/) and its safe, synthetic Origins Lab. The preview is not the eventual dedicated museum site; signed-out browser acceptance is separately tracked.
+
 This is an interpretive exhibit within [LuckyGitHub777's living museum](https://github.com/LuckyGitHub777), bringing historic curiosity and artistic experience together with transparent engineering.
 
 - **Art:** A contemporary exploration of symbolism, myth, memory, and ritual imagination.
