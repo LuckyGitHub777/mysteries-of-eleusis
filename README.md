@@ -4,15 +4,17 @@ A quiet, self-contained interactive website exploring the ancient Greek sanctuar
 
 The exact ancient inner rites are not recoverable. The seven-movement learning pattern is a contemporary interpretation, not a reconstruction or initiation.
 
+## Explore the experience
+
+[**Enter the Mysteries of Eleusis**](https://luckygithub777.github.io/mysteries-of-eleusis/)
+
+Follow the seven movements at your own pace. The website is an interpretive, interactive exploration—not a recreation of ancient secret rites.
+
 ## Run locally
 
 Open `index.html` or run `python3 -m http.server 8000` from the repository root.
 
-## Website
-
-GitHub Pages project site: https://luckygithub777.github.io/mysteries-of-eleusis/
-
-This is a static website. No server, external JavaScript libraries, analytics, cookies, or remote runtime APIs are required. Interactions and reflections stay in the browser.
+The site is self-contained: no server, external JavaScript libraries, analytics, cookies, or remote runtime APIs are required. Interactions and reflections stay in the browser.
 
 ## Accessibility
 
