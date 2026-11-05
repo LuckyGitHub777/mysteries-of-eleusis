@@ -31,3 +31,10 @@ The ancient sanctuary, the myth, the Sacred Way, and the Telesterion are distinc
 ## License
 
 MIT; see [`LICENSE`](LICENSE).
+
+## Continue exploring
+
+- [Let your light shine](https://github.com/LuckyGitHub777/blessed-bible-media) — a collection of faith-inspired visual media.
+- [Gravitas Check](https://github.com/LuckyGitHub777/gravitas-check) — an interactive way to examine how a page communicates.
+
+[Browse the other public projects](https://github.com/LuckyGitHub777?tab=repositories).
