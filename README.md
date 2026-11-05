@@ -18,6 +18,7 @@ Open `index.html` or run `python3 -m http.server 8000` from the repository root.
 
 The site is self-contained: no server, external JavaScript libraries, analytics, cookies, or remote runtime APIs are required. Interactions and reflections stay in the browser.
 
+
 ## Accessibility
 
 Reduced motion, high contrast, focus mode, keyboard navigation and a no-JavaScript reading path are included. Native screen-reader and human usability testing are separate acceptance activities.
