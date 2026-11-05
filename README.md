@@ -16,7 +16,7 @@ Follow the seven movements at your own pace. The website is an interpretive, int
 
 Open `index.html` or run `python3 -m http.server 8000` from the repository root.
 
-The site is self-contained: no server, external JavaScript libraries, analytics, cookies, or remote runtime APIs are required. Interactions and reflections stay in the browser.
+The site is self-contained: no server, external JavaScript libraries, analytics, cookies, or remote runtime APIs are required. Interactions and reflections stay in the browser. The chamber composer now includes an optional plain-text worksheet that can be copied or printed without a script or account.
 
 
 ## Accessibility
