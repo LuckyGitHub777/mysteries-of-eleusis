@@ -22,6 +22,14 @@ checks['unique ids']=len(p.ids)==len(set(p.ids))
 checks['anchor targets']=all(x in p.ids for x in p.anchors)
 checks['local scripts']=all(not re.match(r'https?://',x.get('src','')) for x in p.scripts)
 checks['local css']='href="styles.css"' in html
+checks['same-origin webmanifest permitted by CSP']=(
+ 'href="manifest.webmanifest"' in html
+ and "default-src 'none'" in html
+ and "manifest-src 'self'" in html
+ and (ROOT/'manifest.webmanifest').is_file()
+ and json.loads((ROOT/'manifest.webmanifest').read_text(encoding='utf-8'))['start_url']=='.'
+)
+
 checks['version']='v1.12' in html
 checks['no direct second person in public']=not re.search(r'\b(?:you|your|yours)\b',html+'\n'+js,re.I)
 checks['no public QA lingo']=not re.search(r'\b(?:UAT|research|operating system)\b',html,re.I)
