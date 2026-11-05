@@ -247,6 +247,8 @@ p { color: var(--muted); line-height: 1.68; font-size: clamp(1rem, 1.25vw, 1.08r
 .builder-form label { display: grid; gap: .4rem; color: var(--muted); font-size: .92rem; }
 .builder-form select, .builder-form input { width: 100%; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .8rem .9rem; background: #160f1b; color: var(--text); }
 .blueprint { border-radius: var(--radius-lg); padding: 1.6rem; min-height: 380px; }
+/* Synthetic and user-entered unbroken text must not widen small viewports. */
+.return-panel, .blueprint { min-width: 0; overflow-wrap: anywhere; }
 .blueprint-list { display: grid; gap: .8rem; margin-top: 1rem; }
 .blueprint-list div { border-top: 1px solid var(--line); padding-top: .75rem; color: var(--muted); }
 .blueprint-list strong { color: var(--text); display: block; }
