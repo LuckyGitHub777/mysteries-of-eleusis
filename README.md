@@ -1,5 +1,7 @@
 # The Mysteries of Eleusis
 
+[![A torch and seed: the emblem of The Mysteries of Eleusis](assets/favicon.svg)](https://luckygithub777.github.io/mysteries-of-eleusis/)
+
 A quiet, self-contained interactive website exploring the ancient Greek sanctuary at Eleusis and the traditions associated with Demeter and Persephone. A guided sequence introduces the myth, symbols, sacred procession, boundaries of historical knowledge, and an optional creative composition.
 
 The exact ancient inner rites are not recoverable. The seven-movement learning pattern is a contemporary interpretation, not a reconstruction or initiation.
