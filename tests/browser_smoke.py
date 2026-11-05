@@ -14,7 +14,7 @@ VIEWPORTS = (
     ("desktop", {"width": 1366, "height": 850}),
     ("mobile", {"width": 375, "height": 812}),
 )
-RETURN_PROBE = '<img src=x onerror="window.__eleusisProbe=1">'
+RETURN_PROBE = '<img src=x onerror=1>'
 TITLE_PROBE = '<svg onload="window.__eleusisProbe=1">'
 
 def demand(value, stage):
