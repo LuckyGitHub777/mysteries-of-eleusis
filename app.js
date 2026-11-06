@@ -128,8 +128,11 @@ function escapeHTML(value) { return String(value).replace(/[&<>'"]/g, (char) => 
 
 function initControls() {
   let saved = {};
-  try { saved = JSON.parse(sessionStorage.getItem("eleusisModes") || "{}"); } catch (error) { saved = {}; }
-  modes.forEach((mode) => { if (saved[mode]) document.body.classList.add(mode); });
+  try {
+    const parsed = JSON.parse(sessionStorage.getItem("eleusisModes") || "{}");
+    if (parsed !== null && typeof parsed === "object" && !Array.isArray(parsed)) saved = parsed;
+  } catch (error) { /* Missing or malformed optional preferences must not stop the page. */ }
+  modes.forEach((mode) => { if (saved[mode] === true) document.body.classList.add(mode); });
   updateModeButtons();
   $$(".chip-button[data-mode]").forEach((button) => {
     button.addEventListener("click", () => {
