@@ -52,6 +52,8 @@ def examine(page, label):
     demand(page.locator('button[data-mode="lowSensory"]').get_attribute("aria-pressed") == "true",
            label + ":valid-display-mode-survives-reload")
     page.locator("#resetModes").click()
+    # Reload creates a fresh JavaScript global scope; reset the injection sentinel.
+    page.evaluate("window.__eleusisProbe=0")
 
     page.locator("#customWord").fill(RETURN_PROBE)
     page.locator("#customWordButton").click()
