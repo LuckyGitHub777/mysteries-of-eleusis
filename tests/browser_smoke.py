@@ -37,6 +37,21 @@ def examine(page, label):
     demand(button.get_attribute("aria-pressed") == "true", label + ":low-sensory")
     page.locator("#resetModes").click()
     demand(button.get_attribute("aria-pressed") == "false", label + ":reset")
+    # A valid JSON null used to abort the entire DOMContentLoaded initialization.
+    # Invalid objects must also not turn on display modes via truthy strings.
+    for raw in ("null", '"old"', "[]", '{"lowSensory":"false"}', "{malformed"):
+        page.evaluate("(value) => sessionStorage.setItem('eleusisModes', value)", raw)
+        page.reload(wait_until="load", timeout=25000)
+        demand(page.locator("#mythTrack button").count() == 5,
+               label + ":preferences-do-not-block-interaction")
+        demand(page.locator('button[data-mode="lowSensory"]').get_attribute("aria-pressed") == "false",
+               label + ":invalid-display-mode-remains-off")
+    page.evaluate(
+        "() => sessionStorage.setItem('eleusisModes', JSON.stringify({lowSensory: true}))")
+    page.reload(wait_until="load", timeout=25000)
+    demand(page.locator('button[data-mode="lowSensory"]').get_attribute("aria-pressed") == "true",
+           label + ":valid-display-mode-survives-reload")
+    page.locator("#resetModes").click()
 
     page.locator("#customWord").fill(RETURN_PROBE)
     page.locator("#customWordButton").click()
