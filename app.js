@@ -241,10 +241,14 @@ function initHall() {
 function initReturn() {
   const grid = $("#returnWordGrid"); const panel = $("#returnPanel");
   const show = (word, note) => {
-    grid.querySelectorAll(".word-button").forEach((b) => b.classList.toggle("active", b.textContent === word));
+    grid.querySelectorAll(".word-button").forEach((b) => {
+      const active = b.textContent === word;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-pressed", String(active));
+    });
     panel.innerHTML = `<h3>Return word: ${escapeHTML(word)}.</h3><p>${escapeHTML(note)}</p><p class="panel-question">The story is known. The pattern is known. The hidden boundary is known. The symbols can be read. The return closes the symbolic journey.</p>`;
   };
-  grid.innerHTML = data.returnWords.map(([word]) => `<button class="word-button" type="button">${escapeHTML(word)}</button>`).join("") + `<div class="custom-return"><input id="customWord" aria-label="Write a return word" placeholder="Write a return word" maxlength="32" /><button class="button ghost" type="button" id="customWordButton">Carry</button></div>`;
+  grid.innerHTML = data.returnWords.map(([word]) => `<button class="word-button" type="button" aria-pressed="false">${escapeHTML(word)}</button>`).join("") + `<div class="custom-return"><input id="customWord" aria-label="Write a return word" placeholder="Write a return word" maxlength="32" /><button class="button ghost" type="button" id="customWordButton">Carry</button></div>`;
   grid.querySelectorAll(".word-button").forEach((button, i) => button.addEventListener("click", () => show(data.returnWords[i][0], data.returnWords[i][1])));
   $("#customWordButton")?.addEventListener("click", () => {
     const value = $("#customWord").value.trim() || "Mystery";
