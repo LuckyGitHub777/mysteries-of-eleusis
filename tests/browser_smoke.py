@@ -2,7 +2,7 @@
 """Bounded local Chromium smoke for an existing public Eleusis experience.
 
 No personal test data, production writes, site deployment, telemetry or
-external requests. This is not source-history/asset-rights/privacy clearance.
+external requests. These smoke tests do not establish asset rights or comprehensive privacy or security.
 """
 from pathlib import Path
 import sys
